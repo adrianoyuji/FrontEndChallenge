@@ -1,5 +1,6 @@
 .body {
   display: flex;
+  min-height: 100vh;
   flex: 1;
   background: #2980b9; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -17,9 +18,36 @@
 }
 .AlbumList {
   background-color: rgba(0, 0, 0, 0.85);
-  padding: 50px;
+  min-width: 60vw;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 h1 {
+  text-align: center;
+  color: white;
+}
+
+.rights {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: small;
+  color: white;
+  text-align: center;
+}
+
+.scrollTop {
+  background-color: yellow;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+}
+
+.loading {
+  font-size: xx-large;
   color: white;
 }

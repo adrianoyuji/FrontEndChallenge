@@ -4,6 +4,7 @@ import Home from "./pages/Home/index";
 import About from "./pages/About/index";
 import Header from "./components/Header/index";
 import "./styles.css";
+
 export default function Routes() {
   return (
     <BrowserRouter>

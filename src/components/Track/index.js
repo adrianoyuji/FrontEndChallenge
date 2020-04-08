@@ -5,11 +5,11 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 export default function Track(props) {
-  const [selected, setSeleceted] = useState(false);
+  const [selected, setSelected] = useState(false);
 
   const renderNormal = () => {
     return (
-      <div className="regularContainer" onClick={() => setSeleceted(true)}>
+      <div className="regularContainer" onClick={() => setSelected(true)}>
         <div className="index">
           <h4>#{props.index}</h4>
         </div>
@@ -19,7 +19,7 @@ export default function Track(props) {
           alt={props.album["im:name"].label}
         />
         <div className="info">{props.album.title.label}</div>
-        <div className="icon" onClick={() => setSeleceted(true)}>
+        <div className="icon" onClick={() => setSelected(true)}>
           <FontAwesomeIcon icon={faChevronDown} size="1x" />
         </div>
       </div>
@@ -28,7 +28,7 @@ export default function Track(props) {
 
   const renderSelected = () => {
     return (
-      <div className="expandedContainer">
+      <div className="expandedContainer" onClick={() => setSelected(false)}>
         <div className="index">
           <h4>#{props.index}</h4>
         </div>
@@ -39,13 +39,18 @@ export default function Track(props) {
         />
         <div className="info">
           <div className="title">{props.album.title.label}</div>
-          <div className="category">{props.album.category.attributes.term}</div>
-          <div className="price">{props.album["im:price"].label}</div>
+          <div className="category">
+            Genre: {props.album.category.attributes.term}
+          </div>
+          <div className="releaseDate">
+            Release Date: {props.album["im:releaseDate"].attributes.label}
+          </div>
+          <div className="price">Price: {props.album["im:price"].label}</div>
           <a className="purchaseBtn" href={props.album.id.label}>
             Purchase on iTunes
           </a>
         </div>
-        <div className="icon" onClick={() => setSeleceted(false)}>
+        <div className="icon" onClick={() => setSelected(false)}>
           <FontAwesomeIcon icon={faChevronUp} size="1x" />
         </div>
       </div>
