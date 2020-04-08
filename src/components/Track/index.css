@@ -1,0 +1,68 @@
+.regularContainer {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(241, 237, 237);
+  padding: 5px;
+  margin: 5px;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.expandedContainer {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(241, 237, 237);
+  padding: 5px;
+  margin: 5px;
+  align-items: left;
+  border-radius: 4px;
+}
+
+.imgThumb {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.index {
+  font-size: large;
+  flex: 0.5;
+}
+.info {
+  font-size: large;
+  flex: 8;
+  padding-left: 10px;
+}
+
+.icon {
+  flex: 0.5;
+  padding-right: 5px;
+}
+
+.purchaseBtn {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.title {
+  font-size: x-large;
+  font-weight: bold;
+}
+.category {
+  font-size: medium;
+}
+
+.price {
+  font-weight: bold;
+}
